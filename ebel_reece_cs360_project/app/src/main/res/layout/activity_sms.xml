@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintSMS"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SMSActivity">
+
+    <!-- TOP GUIDELINE -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineOneThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <!-- SMS TITLE -->
+    <TextView
+        android:id="@+id/textSMSTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMS Notifications"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineOneThird"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- SMS DESCRIPTION -->
+    <TextView
+        android:id="@+id/textSMSDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="This app sends low-inventory notifications via SMS. Please grant permission to enable or deny to disable."
+        app:layout_constraintTop_toBottomOf="@+id/textSMSTitle"
+        app:layout_constraintStart_toStartOf="@+id/textSMSTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- SMS PERMISSION BUTTON -->
+    <Button
+        android:id="@+id/btnRequestSMSPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable SMS Notifications"
+        app:layout_constraintTop_toBottomOf="@+id/textSMSDescription"
+        app:layout_constraintStart_toStartOf="@+id/textSMSDescription"
+        android:layout_marginTop="16dp" />
+
+    <!-- SMS STATUS TEXTVIEW -->
+    <TextView
+        android:id="@+id/textSMSStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Unknown"
+        app:layout_constraintTop_toBottomOf="@+id/btnRequestSMSPermission"
+        app:layout_constraintStart_toStartOf="@+id/btnRequestSMSPermission"
+        android:layout_marginTop="16dp" />
+
+    <!-- HOME BUTTON -->
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="140dp"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSMSStatus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

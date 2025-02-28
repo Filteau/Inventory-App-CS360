@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintDataDisplay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InventoryActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineOneThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textDataTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inventory Items"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineOneThird"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Table layout for displaying inventory items -->
+    <TableLayout
+        android:id="@+id/tableLayoutData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2,3"
+        app:layout_constraintTop_toBottomOf="@+id/textDataTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp">
+
+        <!-- Header Row -->
+        <TableRow>
+            <TextView
+                android:text="Item"
+                android:textStyle="bold"
+                android:layout_margin="8dp" />
+            <TextView
+                android:text="Qty"
+                android:textStyle="bold"
+                android:layout_margin="8dp" />
+            <TextView
+                android:text="Price"
+                android:textStyle="bold"
+                android:layout_margin="8dp" />
+            <TextView
+                android:text="Delete"
+                android:textStyle="bold"
+                android:layout_margin="8dp" />
+            <TextView
+                android:text="Update"
+                android:textStyle="bold"
+                android:layout_margin="8dp" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- ADD ITEM BUTTON -->
+    <Button
+        android:id="@+id/btnAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayoutData"
+        app:layout_constraintStart_toStartOf="@+id/tableLayoutData"
+        android:layout_marginTop="16dp" />
+
+    <!-- SMS SCREEN BUTTON -->
+    <Button
+        android:id="@+id/btnGoToSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMS Screen"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayoutData"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayoutData"
+        android:layout_marginTop="16dp" />
+
+    <!-- LOGOUT BUTTON -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoToSMS"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

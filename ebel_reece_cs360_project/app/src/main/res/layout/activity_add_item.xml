@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintAddItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItemActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineOneThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <TextView
+        android:id="@+id/textAddItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Item"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineOneThird"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Item Name -->
+    <EditText
+        android:id="@+id/editItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Item Name"
+        app:layout_constraintTop_toBottomOf="@+id/textAddItemTitle"
+        app:layout_constraintStart_toStartOf="@+id/textAddItemTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Item Description -->
+    <EditText
+        android:id="@+id/editItemDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        app:layout_constraintTop_toBottomOf="@+id/editItemName"
+        app:layout_constraintStart_toStartOf="@+id/editItemName"
+        app:layout_constraintEnd_toEndOf="@+id/editItemName"
+        android:layout_marginTop="16dp" />
+
+    <!-- Item Price -->
+    <EditText
+        android:id="@+id/editItemPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/editItemDesc"
+        app:layout_constraintStart_toStartOf="@+id/editItemDesc"
+        app:layout_constraintEnd_toEndOf="@+id/editItemDesc"
+        android:layout_marginTop="16dp" />
+
+    <!-- Item Quantity -->
+    <EditText
+        android:id="@+id/editItemQty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/editItemPrice"
+        app:layout_constraintStart_toStartOf="@+id/editItemPrice"
+        app:layout_constraintEnd_toEndOf="@+id/editItemPrice"
+        android:layout_marginTop="16dp" />
+
+    <!-- Save button -->
+    <Button
+        android:id="@+id/btnSaveItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@+id/editItemQty"
+        app:layout_constraintStart_toStartOf="@+id/editItemQty"
+        android:layout_marginTop="24dp" />
+
+    <!-- Cancel button -->
+    <Button
+        android:id="@+id/btnCancelItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@+id/editItemQty"
+        app:layout_constraintEnd_toEndOf="@+id/editItemQty"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
